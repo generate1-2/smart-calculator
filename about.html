@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Smart Calculator</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  line-height: 1.7;
+  color: #222;
+  background: #f7f7f7;
+}
+main {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+}
+select {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+a { color: #0759b5; }
+</style>
+</head>
+<body>
+<main>
+<select id="language" onchange="changeLanguage()">
+  <option value="en">English</option>
+  <option value="hi">हिन्दी</option>
+</select>
+
+<div id="english">
+<h1>About Smart Calculator</h1>
+<p>Welcome to Smart Calculator!</p>
+<p>Smart Calculator is a simple and easy-to-use online calculator website. Our goal is to make everyday calculations easier for everyone.</p>
+<p>You can use our tools for basic calculations, percentages, discounts, interest, EMI, SIP, SWP, FD and RD calculations.</p>
+<p>We aim to make our website useful, simple and accessible to people around the world.</p>
+<p>Thank you for visiting Smart Calculator.</p>
+</div>
+
+<div id="hindi" style="display:none">
+<h1>स्मार्ट कैलकुलेटर के बारे में</h1>
+<p>Smart Calculator में आपका स्वागत है!</p>
+<p>यह एक सरल और उपयोग में आसान ऑनलाइन कैलकुलेटर वेबसाइट है। हमारा उद्देश्य रोज़मर्रा की गणनाओं को सभी के लिए आसान बनाना है।</p>
+<p>यहाँ आप सामान्य गणना, प्रतिशत, छूट, ब्याज, EMI, SIP, SWP, FD और RD की गणना कर सकते हैं।</p>
+<p>हमारी कोशिश है कि यह वेबसाइट दुनिया भर के लोगों के लिए उपयोगी और आसान बने।</p>
+<p>Smart Calculator पर आने के लिए धन्यवाद।</p>
+</div>
+
+<p><a href="index.html">Home / मुख्य पेज</a></p>
+</main>
+
+<script>
+function changeLanguage() {
+  const lang = document.getElementById("language").value;
+  document.getElementById("english").style.display =
+    lang === "en" ? "block" : "none";
+  document.getElementById("hindi").style.display =
+    lang === "hi" ? "block" : "none";
+}
+</script>
+</body>
+</html>
