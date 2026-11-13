@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - Smart Calculator</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  line-height: 1.7;
+  color: #222;
+  background: #f7f7f7;
+}
+main {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+}
+select {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+</style>
+</head>
+<body>
+<main>
+<select id="language" onchange="changeLanguage()">
+<option value="en">English</option>
+<option value="hi">हिन्दी</option>
+</select>
+
+<div id="english">
+<h1>Privacy Policy</h1>
+<p>At Smart Calculator, we respect your privacy.</p>
+<h2>Information We Collect</h2>
+<p>Our calculator tools are designed to work without requiring personal information.</p>
+<h2>Cookies</h2>
+<p>Our website may use cookies and similar technologies to improve user experience.</p>
+<h2>Third-Party Services</h2>
+<p>We may use third-party services such as Google Analytics or Google AdSense in the future. These services may use cookies to provide their features and advertisements.</p>
+<h2>Children's Privacy</h2>
+<p>Our website is not designed to knowingly collect personal information from children.</p>
+<h2>Policy Updates</h2>
+<p>We may update this Privacy Policy from time to time.</p>
+<h2>Contact</h2>
+<p>For privacy questions, please contact us through our website.</p>
+</div>
+
+<div id="hindi" style="display:none">
+<h1>गोपनीयता नीति</h1>
+<p>Smart Calculator में हम आपकी गोपनीयता का सम्मान करते हैं।</p>
+<h2>हम कौन-सी जानकारी लेते हैं?</h2>
+<p>हमारे कैलकुलेटर टूल व्यक्तिगत जानकारी माँगे बिना काम करने के लिए बनाए गए हैं।</p>
+<h2>कुकीज़</h2>
+<p>वेबसाइट आपके अनुभव को बेहतर बनाने के लिए कुकीज़ का उपयोग कर सकती है।</p>
+<h2>थर्ड-पार्टी सेवाएँ</h2>
+<p>भविष्य में हम Google Analytics या Google AdSense जैसी सेवाओं का उपयोग कर सकते हैं। ये सेवाएँ कुकीज़ का उपयोग कर सकती हैं।</p>
+<h2>बच्चों की गोपनीयता</h2>
+<p>हम जानबूझकर बच्चों की व्यक्तिगत जानकारी एकत्र करने के लिए वेबसाइट नहीं बनाते हैं।</p>
+<h2>नीति में बदलाव</h2>
+<p>हम समय-समय पर इस नीति को अपडेट कर सकते हैं।</p>
+<h2>संपर्क</h2>
+<p>गोपनीयता से जुड़े सवालों के लिए हमारी वेबसाइट के माध्यम से संपर्क करें।</p>
+</div>
+
+<p><a href="index.html">Home / मुख्य पेज</a></p>
+</main>
+
+<script>
+function changeLanguage() {
+  const lang = document.getElementById("language").value;
+  document.getElementById("english").style.display = lang === "en" ? "block" : "none";
+  document.getElementById("hindi").style.display = lang === "hi" ? "block" : "none";
+}
+</script>
+</body>
+</html>
