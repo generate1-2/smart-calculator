@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Smart Calculator</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  line-height: 1.7;
+  color: #222;
+  background: #f7f7f7;
+}
+main {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+}
+select {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+</style>
+</head>
+<body>
+<main>
+<select id="language" onchange="changeLanguage()">
+<option value="en">English</option>
+<option value="hi">हिन्दी</option>
+</select>
+
+<div id="english">
+<h1>Contact Us</h1>
+<p>Thank you for visiting Smart Calculator.</p>
+<p>We welcome your feedback and suggestions to help us improve our website.</p>
+<p>A contact form will be added in the future.</p>
+</div>
+
+<div id="hindi" style="display:none">
+<h1>संपर्क करें</h1>
+<p>Smart Calculator पर आने के लिए धन्यवाद।</p>
+<p>वेबसाइट को बेहतर बनाने के लिए हम आपके सुझाव और प्रतिक्रिया का स्वागत करते हैं।</p>
+<p>भविष्य में यहाँ संपर्क फ़ॉर्म जोड़ा जाएगा।</p>
+</div>
+
+<p><a href="index.html">Home / मुख्य पेज</a></p>
+</main>
+
+<script>
+function changeLanguage() {
+  const lang = document.getElementById("language").value;
+  document.getElementById("english").style.display =
+    lang === "en" ? "block" : "none";
+  document.getElementById("hindi").style.display =
+    lang === "hi" ? "block" : "none";
+}
+</script>
+</body>
+</html>
