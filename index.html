@@ -5,7 +5,39 @@
 </style></head><body>
 <header><div class="wrap" style="padding:0"><small>SMART TOOLS</small><h1>Smart Calculator</h1><p>स्मार्ट कैलकुलेटर · Hindi + English</p></div></header>
 <main class="wrap"><div class="toolbar"><button id="hiBtn" class="active" onclick="setLang('hi')">हिंदी</button><button id="enBtn" onclick="setLang('en')">English</button></div>
-<div class="section-title" id="chooseTitle">कैलकुलेटर चुनें / Choose a calculator</div><div class="grid" id="menu"></div><section class="panel" id="toolPanel"></section><p class="note" id="disclaimer">नोट: SIP/SWP के रिटर्न अनुमान हैं, गारंटी नहीं। परिणाम केवल जानकारी के लिए हैं, वित्तीय सलाह नहीं।</p><div class="footer">Smart Calculator · Made for easy everyday calculations</div></main>
+<div class="section-title" id="chooseTitle">कैलकुलेटर चुनें / Choose a calculator</div><div class="grid" id="menu"></div><section class="panel" id="toolPanel"></section>
+<section class="panel" id="calculator-guide">
+<h2>Calculator Guide | कैलकुलेटर गाइड</h2>
+<p>Use our free online calculators for everyday financial and mathematical calculations. रोजमर्रा की गणना के लिए इन मुफ्त कैलकुलेटर का उपयोग करें।</p>
+
+<h3>1. Normal Calculator</h3>
+<p>Perform addition, subtraction, multiplication and division. जोड़, घटाव, गुणा और भाग करें।</p>
+
+<h3>2. Interest Calculator</h3>
+<p>Calculate simple and compound interest. साधारण और चक्रवृद्धि ब्याज निकालें।</p>
+
+<h3>3. SIP Calculator</h3>
+<p>Estimate the future value of regular monthly investments. मासिक निवेश की अनुमानित भविष्य की रकम जानें।</p>
+
+<h3>4. SWP Calculator</h3>
+<p>Estimate how long your investment may last with regular withdrawals. नियमित निकासी के साथ निवेश कितने समय तक चलेगा, इसका अनुमान लगाएँ।</p>
+
+<h3>5. EMI Calculator</h3>
+<p>Calculate your monthly loan installment, total repayment and interest. लोन की मासिक किस्त और कुल ब्याज जानें।</p>
+
+<h3>6. FD Calculator</h3>
+<p>Estimate fixed deposit maturity amount and interest earned. FD की मैच्योरिटी राशि और ब्याज का अनुमान लगाएँ।</p>
+
+<h3>7. RD Calculator</h3>
+<p>Estimate the maturity value of monthly recurring deposits. RD की अनुमानित मैच्योरिटी जानें।</p>
+
+<h3>8. Percentage Calculator</h3>
+<p>Calculate percentages quickly and easily. आसानी से प्रतिशत निकालें।</p>
+
+<h3>9. Discount Calculator</h3>
+<p>Find the final price after discount and calculate your savings. छूट के बाद कीमत और बचत जानें।</p>
+</section>
+  <p class="note" id="disclaimer">नोट: SIP/SWP के रिटर्न अनुमान हैं, गारंटी नहीं। परिणाम केवल जानकारी के लिए हैं, वित्तीय सलाह नहीं।</p><div class="footer">Smart Calculator · Made for easy everyday calculations</div></main>
 <script>
 let lang='hi',current='normal',expr='';const names={normal:['Normal Calculator','सामान्य कैलकुलेटर'],interest:['Interest Calculator','ब्याज कैलकुलेटर'],sip:['SIP Calculator','SIP निवेश कैलकुलेटर'],swp:['SWP Calculator','SWP निकासी कैलकुलेटर'],emi:['Loan EMI Calculator','लोन EMI कैलकुलेटर'],fd:['FD Calculator','FD कैलकुलेटर'],rd:['RD Calculator','RD कैलकुलेटर'],percent:['Percentage Calculator','प्रतिशत कैलकुलेटर'],discount:['Discount Calculator','डिस्काउंट कैलकुलेटर']};const desc={normal:['Basic maths','जोड़, घटाव, गुणा, भाग'],interest:['Simple & compound interest','साधारण और चक्रवृद्धि ब्याज'],sip:['Monthly investment estimate','मासिक निवेश का अनुमान'],swp:['Monthly withdrawal estimate','मासिक निकासी का अनुमान'],emi:['Monthly loan payment','मासिक लोन किस्त'],fd:['Fixed deposit maturity','FD की मैच्योरिटी'],rd:['Recurring deposit estimate','RD की अनुमानित रकम'],percent:['Find percentage','प्रतिशत निकालें'],discount:['Sale price and savings','छूट और अंतिम कीमत']};const money=n=>'₹'+(Number.isFinite(n)?n:0).toLocaleString('en-IN',{maximumFractionDigits:2});function tx(en,hi){return lang==='hi'?hi:en}function setLang(l){lang=l;document.getElementById('hiBtn').classList.toggle('active',l==='hi');document.getElementById('enBtn').classList.toggle('active',l==='en');renderMenu();renderTool()}
 function renderMenu(){document.getElementById('menu').innerHTML=Object.keys(names).map(k=>`<button class="tab ${current===k?'active':''}" onclick="choose('${k}')">${names[k][lang==='hi'?1:0]}<span>${desc[k][lang==='hi'?1:0]}</span></button>`).join('')}
